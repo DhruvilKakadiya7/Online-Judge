@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'register',
     'dashboard',
     'problemPage',
-    'addProblem'
+    'addProblem',
+    'profilePage'
 ]
 
 MIDDLEWARE = [

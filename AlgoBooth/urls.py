@@ -7,4 +7,5 @@ urlpatterns = [
     path('problem/' , include('problemPage.urls')),
     path('add_problem/' , include('addProblem.urls')),
     path('' , include('dashboard.urls')),
+    path('profile_page/' , include('profilePage.urls')),
 ]

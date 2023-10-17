@@ -1,0 +1,72 @@
+#profile-page-container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 60px;
+    padding: 30px;
+    width: 60%;
+    background-color: var(--color-a-theme-1);
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px grey;
+}
+
+#profile-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#profile-details-left{
+    flex: 3;
+}
+#profile-details-right{
+    max-height: 280px;
+    max-width: 280px;
+    flex: 2;
+    display: grid;
+    place-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--color-a-theme-2);
+}
+
+#profile-details-right img{
+    height: 90%;
+    width: 90%;
+    border-radius: 5px;
+}
+
+#profile-page-container table{
+    width: 30%;
+    min-width: 300px;
+}
+#profile-page-container td{
+    border: none;
+    text-align: left;
+    padding: 0;
+}
+#profile-page-container td:first-child{
+    width: 10%;
+}
+#profile-page-container td:nth-child(2){
+    width: 45%;
+}
+#profile-page-container td:last-child{
+    color: var(--color-a);
+}
+#profile-username{
+    color: var(--color-a);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+#profile-location , #profile-name{
+    font-size: 0.8rem;
+    margin-bottom: 3px;
+}
+#profile-org{
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+}
+
+.icons{
+    width: 1.6rem;
+}

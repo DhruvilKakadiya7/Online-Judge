@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{% block add_css_file %}
+    <link href='{% static "styles/profile_page.css" %}' rel="stylesheet">    
+{% endblock add_css_file %}
+%{% block title %}Profile Page{% endblock title %}%
+
+{% block content %}
+    <div id = "profile-page-container">
+        <div id = "profile-details">
+            <div id = "profile-details-left">
+                <div id = "profile-username">
+                    JUBHAI
+                </div>
+                <div id = "profile-name">
+                    Urvik Jada
+                </div>
+                <div id = "profile-location">
+                    Botad India
+                </div>
+                <div id = "profile-org">
+                    Nirma University
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <td><img class = "icons" src="{% static "icons/problem_solved.svg" %}" alt=""></td>
+                            <td>Problem Solved</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td><img class = "icons" src="{% static "icons/blog.svg" %}" alt=""></td>
+                            <td>Blog Written</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td><img class = "icons" src="{% static "icons/star.svg" %}" alt=""></td>
+                            <td>Contribution</td>
+                            <td>+156</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id = "profile-details-right">
+                <img src={% static "jubhai.jpg" %} alt="Loading profile photo">
+            </div>
+        </div>
+        
+    </div>
+{% endblock content %}
+
+
+{% block add_js_file %}
+    <script src = {% static "scripts/problem_page.js" %}>
+        
+    </script>
+    <script>
+    </script>
+{% endblock add_js_file %}
