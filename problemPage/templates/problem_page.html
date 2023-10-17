@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+{% block add_css_file %}
+    <link href='{% static "styles/problem_page.css" %}' rel="stylesheet">    
+{% endblock add_css_file %}
+%{% block title %}Problem Page{% endblock title %}%
+
+{% block content %}
+    <div id = "problem-page-container">
+        <div id = "problem-title">
+            Problem Page
+        </div>
+        <div id = "sub-container">
+            <div id = "left-side">
+                <div id = "problem-list-container">
+                    <table id = "problem-list-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Problem Name</th>
+                                <th>
+                                    Rating
+                                    {% comment %} <a href="{% url "sorted_by_rating" %}">v</a> {% endcomment %}
+                                </th>
+                                <th>Solved by</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for problem in problems %}
+                                <tr>
+                                    <td>{{problem.id}}</td>
+                                    <td><a href="{% url 'problem_details' problem.id %}">{{problem.name}}</a></td>
+                                    <td>{{problem.rating}}</td>
+                                    <td>0</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id = "right-side">
+                <div class = "right-side-sub-container">
+                    <div class = "sub-container-title">
+                        Filter
+                    </div>
+                    <div id = "filter-container" class = "vertical-flex-div">
+                        <form method = "post">
+                            {% csrf_token %}
+                            <div class = "vertical-flex-div">
+                                <div class = "range-div">
+                                    <label for="">Rating Range</label>
+                                    <div class = "horizontal-flex-div">
+                                        <input type="number" name="rating_from" value={{rating_from}}>
+                                        <div>
+                                            -
+                                        </div>
+                                        <input type="number" name="rating_to" value={{rating_to}}>
+                                    </div>
+                                </div>
+                                <div class = "range-div">
+                                    <label for="">Solved by Range</label>
+                                    <div class = "horizontal-flex-div">
+                                        <input type="number" name="solved_from" value={{solved_from}}>
+                                        <div>
+                                            -
+                                        </div>
+                                        <input type="number" name="solved_to" value={{solved_to}}>
+                                    </div>
+                                </div>
+                                <input class = "btn" type="submit" name="submit" value="Apply">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+{% endblock content %}
+
+
+{% block add_js_file %}
+    <script src = {% static "scripts/problem_page.js" %}>
+        
+    </script>
+{% endblock add_js_file %}

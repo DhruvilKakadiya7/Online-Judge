@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% load static %}
+{% block add_css_file %}
+    <link href='{% static "styles/problem_page.css" %}' rel="stylesheet">    
+{% endblock add_css_file %}
+%{% block title %}Register{% endblock title %}%
+
+{% block content %}
+    <div id = "problem-page-container">
+        
+        <div id = "problem-title">
+            {{problem.name}}
+        </div>
+        <div id = "sub-container">
+            <div id = "left-side" class = "problem-details-left-side">
+
+                <div class = "sub-section-title">
+                    Problem Statement
+                </div>
+                <div class = "sub-section-content" id = "problem-statement">
+                    {{problem.statement|linebreaksbr}}
+                </div>
+                <div class = "sub-section-title">
+                    Input Format
+                </div>
+                <div class = "sub-section-content">
+                    {{problem.input_description|linebreaksbr}}
+                </div>
+                <div class = "sub-section-title">
+                    Output Format
+                </div>
+                <div class = "sub-section-content">
+                    {{problem.output_description|linebreaksbr}}    
+                </div>
+                <div class = "sub-section-title">
+                    Sample Testcases
+                </div>
+                {% for tc in testcases %}
+                    <details>
+                        <summary class = "details-summary">Test case {{tc.tc_id}}</summary>
+                        <div class = "sub-section-content" id = "sample-test-cases-container">
+                            <div class = "input-container">
+                                <div class = "test-cases-title">
+                                    Input
+                                    <button id="input-copy-btn" class="copy-btn" type="">Copy</button>
+                                </div>
+                                <div class = "test-cases-data">
+                                    {{tc.input_text|linebreaksbr}}
+                                </div>
+                            </div>
+                            <div class = "output-container">
+                                <div class = "test-cases-title">
+                                    Output
+                                    <button id="output-copy-btn" class="copy-btn" type="">Copy</button>
+                                </div>
+                                <div class = "test-cases-data">
+                                    {{tc.output_text|linebreaksbr}}
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                {% endfor %}
+                
+                <div class = "sub-section-title">
+                    Explanation
+                </div>
+                <div class = "sub-section-content">
+                    {{problem.explanation|linebreaksbr}}
+                </div>
+                
+            </div>
+            <div id = "right-side">
+                <div id = "problem-details-container">
+                    <div id = "problem-details-title">
+                        Prolem details
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <td>Created on</td>
+                                <td>{{problem.added_date}}</td>
+                            </tr>
+                            <tr>
+                                <td>Total submissions</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Accepted</td>
+                                <td>8</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+
+{% block add_js_file %}
+    <script src = {% static "scripts/problem_page.js" %}>
+        
+    </script>
+    <script>
+        console.log("done");
+        console.log(`{{problem.statement}}`)
+    </script>
+{% endblock add_js_file %}

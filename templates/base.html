@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock title %}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link href='{% static "styles/base.css" %}' rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+        {% block add_css_file %}{% endblock add_css_file %}
+    </head>
+    <body>
+        <div id = "root">
+            <div id = "navbar">
+                <div id = "logo">
+                    <span class = "special-char">A</span>lgo<span class = "special-char">B</span>ooth
+                </div>
+                <div id = "nav-item-div">
+                    <div class = "nav-item">
+                        <a href="{% url "dashboard" %}">Dashboard</a>
+                    </div>
+                    <div class = "vertical-line"></div>
+                    <div class = "nav-item">
+                        <a href="{% url "problem_page" %}">Problem Details</a>
+                    </div>
+                    <div class = "vertical-line"></div>
+                    <div class = "nav-item">
+                        <a href="{% url "add_problem_page" %}">Add Problem</a>
+                    </div>
+                    <div class = "vertical-line"></div>
+                    <div class = "nav-item">
+                        <a href="{% url "dashboard" %}">Section</a>
+                    </div>
+                    <div class = "vertical-line"></div>
+                    <div class = "nav-item">
+                        <a href="{% url "dashboard" %}">Section</a>
+                    </div>
+                    <div class = "vertical-line"></div>
+                    <div class = "nav-item">
+                        <a href="{% url "dashboard" %}">Section</a>
+                    </div>
+                </div>
+                <div class = "nav-item" id = "nav-item-login">
+                    <a href="{% url "register" %}">Login</a>
+                </div>
+            </div>
+            <div class = "horizontal-line">
+                
+            </div>
+            <div id = "container">
+                {% block content %}{% endblock content %}
+            </div>
+        </div>
+
+    {% block add_js_file %}{% endblock add_js_file %}
+    </body>
+</html>

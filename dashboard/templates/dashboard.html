@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load static %}
+{% block add_css_file %}
+    <link href='{% static "styles.css" %}' rel="stylesheet">    
+{% endblock add_css_file %}
+%{% block title %}Dashboard{% endblock title %}%
+{% block content %}
+    This is my dashboard
+{% endblock content %}

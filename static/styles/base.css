@@ -1,0 +1,81 @@
+body{
+    --color-a: #45FFCA;
+    --color-a-low: rgba(69,255,202,0.5);
+    --color-a-theme-1: rgb(34, 34, 34);
+    --color-a-theme-2: rgb(67, 66, 66);
+    --color-b: yellow;
+    --color-c: white;
+    font-family: 'Mooli', sans-serif;
+    background-color: #000000;
+    color: var(--color-b);
+}
+
+#container{
+    width: 90%;
+}
+
+#root{
+    display: grid;
+    place-items: center;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    align-items: center;
+    padding: 5px;
+    width: 90%;
+}
+
+#nav-item-div{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-evenly;
+}
+
+.nav-item{
+    padding-right: 5px;
+    color: var(--color-b);
+}
+
+.nav-item a{
+    padding: 8px;
+    text-decoration: none;
+    color: var(--color-b);
+}
+
+.nav-item a:hover{
+    background-color: var(--color-a-low);
+}
+
+.vertical-line{
+    width: 2px;
+    height: 1.6rem;
+    background-color: var(--color-a)
+}
+
+#logo{
+    margin-right: 30px;
+    font-size: 1.6rem;
+}
+
+.special-char{
+    color: var(--color-a);
+    font-size: 2rem;
+}
+
+#nav-item-login{
+    margin-left: auto;
+}
+
+.horizontal-line{
+    width: 90%;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-a);
+}
