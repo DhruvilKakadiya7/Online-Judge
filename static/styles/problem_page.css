@@ -6,6 +6,16 @@
     gap: 20px;
 }
 
+#login-page-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+
+
 #problem-title{
     font-size: 2.4rem;
     margin-top: 40px;
@@ -134,7 +144,7 @@ tbody tr:nth-of-type(odd){
 }
 
 
-td a, th a{
+td a, th a , .no_decoration{
     text-decoration: none;
     color: var(--color-b);
 }

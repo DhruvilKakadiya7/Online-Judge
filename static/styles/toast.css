@@ -1,0 +1,36 @@
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 2px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 1s, width 1s;
+    /* min-width: 25vw; */
+    width: 0;
+    max-width: 25vw;
+    padding: 10px;
+    text-align: left;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+/* .toast.show {
+    opacity: 1;
+    visibility: visible;
+} */
+.show{
+    opacity: 1;
+    width: 50vw;
+}
+
+.info{
+    color: black;
+}
+
+.error{
+    color: white;
+}

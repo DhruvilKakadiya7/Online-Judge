@@ -9,7 +9,7 @@
 {% block content %}
     <div id = "login-page-container">
         <div id = "problem-title">
-            Sign Up
+            Login
         </div>
         <div id = "sub-from-container">
             <form method = "post">
@@ -27,23 +27,24 @@
                     {% endfor %}
                 </div>
                 <div style = "text-align:center">
-                    <input type="submit" id = "submit-btn" value = "Register"/>
+                    <input type="submit" id = "submit-btn" value = "Login"/>
                 </div>
             </form>
         </div>
-
         <div>
-            <a class = "no_decoration" type="" href = '{% url "login" %}'>Already have an account? </a>
+            <a class = "no_decoration" type="" href = '{% url "register" %}'>Create New Account</a>
         </div>
-        
-
-        
-
     </div>
 {% endblock content %}
 
 
 {% block add_js_file %}
     <script src ={% static "scripts/register.js" %}>
+    </script>
+
+    <script>
+        if("{{info}}"){
+            showToast("{{info}}" , "error")
+        }
     </script>
 {% endblock add_js_file %}

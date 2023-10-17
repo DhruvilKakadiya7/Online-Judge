@@ -83,4 +83,12 @@
     <script src = {% static "scripts/problem_page.js" %}>
         
     </script>
+    <script>
+        if("{{rating_from}}"){
+            showToast("Filter Updated" , "info")
+        }
+        else{
+            console.log("else");
+        }
+    </script>
 {% endblock add_js_file %}
