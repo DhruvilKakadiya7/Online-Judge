@@ -1,16 +1,15 @@
 from django.db import models
 
-# Create your models here.
+LANG_CHOICES = (
+    ('c++', 'cpp'),
+    ('python', 'Python'),
+    ('java', 'Java'),
+)
 
-class TestCases(models.Model) :
-    input_text = models.TextField()
-    output_text = models.TextField()
-    
-class Problem(models.Model) :
-    name = models.CharField(max_length = 100)
-    statement = models.TextField()
-    input_description = models.TextField()
-    output_description = models.TextField()
-    testcases = models.ForeignKey(TestCases , on_delete = models.CASCADE)
-    explanation = models.TextField()
-    
+class Submission(models.Model) :
+    problem_id = models.IntegerField()
+    user_id = models.IntegerField()
+    submission_time = models.DateTimeField(auto_now_add = True)
+    language = models.CharField(max_length = 50 , choices = LANG_CHOICES , default = 'c++')
+    verdict = models.CharField(max_length = 50 , null = True)    
+    source_file = models.FileField(upload_to = 'source_codes/' , null = True)

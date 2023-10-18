@@ -70,8 +70,8 @@
                 
             </div>
             <div id = "right-side">
-                <div id = "problem-details-container">
-                    <div id = "problem-details-title">
+                <div class = "details-container">
+                    <div class = "details-title">
                         Prolem details
                     </div>
                     <div>
@@ -90,7 +90,33 @@
                             </tr>
                         </table>
                     </div>
-                </div>               
+                </div>
+                
+                <div class = "details-container" id = "submit-container">
+                    <div class = "details-title">
+                        Submit Solution
+                    </div>
+
+                    <div id = "submit-solution">
+                        <form method = "post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div id = "form-container">
+                                <input class = "hidden" type="number" name="problem_id" value={{problem.id}}>
+                                <input class = "hidden" type="number" name="user_id" value="1">
+                                <div>
+                                    {{submission_form.language.label_tag}}&nbsp;
+                                    {{submission_form.language}}
+                                </div>
+                                <div id = "file-input">
+                                    {{submission_form.source_file.label_tag}}
+                                    {{submission_form.source_file}}
+                                </div>
+                                <input id = "submit-btn" type="submit" name="submit" value="submit">
+                            </div>
+                        </form>
+                </div>
+                </div>
+                
             </div>
         </div>
     </div>

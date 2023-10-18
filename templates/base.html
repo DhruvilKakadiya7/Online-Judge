@@ -46,6 +46,9 @@
                 <div class = "nav-item" id = "nav-item-login">
                     <a href="{% url "login" %}">Login</a>
                 </div>
+                <div title = "Change Theme" class = "nav-item" id = "change-theme">
+                    <img class = "icons" src="{% static "icons/theme.svg" %}" alt="">
+                </div>
             </div>
             <div class = "horizontal-line">
                 
@@ -62,11 +65,12 @@
         </div>
 
         <script src = {% static "scripts/toast.js" %}>
-            
         </script>
-        <script>
-            
+
+        <script src = {% static "scripts/base.js" %}>
         </script>
+
     {% block add_js_file %}{% endblock add_js_file %}
+
     </body>
 </html>

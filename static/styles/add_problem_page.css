@@ -50,7 +50,7 @@
     border: 2px solid var(--color-a);
     border-radius: 5px;
     padding: 10px;
-    color: white;
+    color: var(--color-c);
 }
 #tc-btn{
     padding: 3px;

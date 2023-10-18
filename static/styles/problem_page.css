@@ -35,7 +35,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    border-right: 1px solid white;
+    border-right: 1px solid var(--color-c);
     padding: 20px;
 }
 
@@ -46,6 +46,10 @@
 #right-side{
     height: auto;
     flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
 }
 
 .sub-section-title{
@@ -104,7 +108,7 @@
     border: 2px solid var(--color-a);
     border-radius: 5px;
     padding: 5px;
-    color: white;
+    color: var(--color-c);;
 }
 
 th{
@@ -153,20 +157,26 @@ td:nth-child(2):hover{
     background-color: var(--color-a-low);
 }
 
-#problem-details-container{
+.details-container{
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    
+    border: 2px solid var(--color-b);
+    border-radius: 10px;
 }
 
-#problem-details-title , .sub-container-title{
+.details-title , .sub-container-title{
     color: var(--color-a);
     text-align: center;
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
 }
 
-#problem-details-container td{
+.details-container td{
     text-align: left;
     padding-left: 10px;
     border-radius: 2px;
@@ -203,4 +213,33 @@ td:nth-child(2):hover{
     display: flex;
     gap: 10px;
     align-items: center;
+}
+
+.hidden{
+    display: none;
+}
+
+#form-container{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+}
+
+#file-input input{
+    width: 50%;
+}
+#submit-btn{
+    cursor: pointer;
+    background-color: inherit;
+    border: 2px solid var(--color-a);
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--color-c);
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#submit-container{
 }
