@@ -36,29 +36,32 @@
                     Sample Testcases
                 </div>
                 {% for tc in testcases %}
-                    <details>
-                        <summary class = "details-summary">Test case {{tc.tc_id}}</summary>
-                        <div class = "sub-section-content" id = "sample-test-cases-container">
-                            <div class = "input-container">
-                                <div class = "test-cases-title">
-                                    Input
-                                    <button id="input-copy-btn" class="copy-btn" type="">Copy</button>
+                    {% if tc.show %}
+                        <details>
+                            <summary class = "details-summary">Test case {{tc.tc_shown_id}}</summary>
+                            <div class = "sub-section-content" id = "sample-test-cases-container">
+                                <div class = "input-container">
+                                    <div class = "test-cases-title">
+                                        Input
+                                        <button id="input-copy-btn" class="copy-btn" type="">Copy</button>
+                                    </div>
+                                    <div class = "test-cases-data">
+                                        {{tc.input_text|linebreaksbr}}
+                                    </div>
                                 </div>
-                                <div class = "test-cases-data">
-                                    {{tc.input_text|linebreaksbr}}
+                                <div class = "output-container">
+                                    <div class = "test-cases-title">
+                                        Output
+                                        <button id="output-copy-btn" class="copy-btn" type="">Copy</button>
+                                    </div>
+                                    <div class = "test-cases-data">
+                                        {{tc.output_text|linebreaksbr}}
+                                    </div>
                                 </div>
                             </div>
-                            <div class = "output-container">
-                                <div class = "test-cases-title">
-                                    Output
-                                    <button id="output-copy-btn" class="copy-btn" type="">Copy</button>
-                                </div>
-                                <div class = "test-cases-data">
-                                    {{tc.output_text|linebreaksbr}}
-                                </div>
-                            </div>
-                        </div>
-                    </details>
+                        </details>
+                    {% endif %}
+                    
                 {% endfor %}
                 
                 <div class = "sub-section-title">
@@ -98,7 +101,7 @@
                     </div>
 
                     <div id = "submit-solution">
-                        <form method = "post" enctype="multipart/form-data">
+                        <form method = "post" enctype="multipart/form-data" id = "form">
                             {% csrf_token %}
                             <div id = "form-container">
                                 <input class = "hidden" type="number" name="problem_id" value={{problem.id}}>
@@ -114,11 +117,38 @@
                                 <input id = "submit-btn" type="submit" name="submit" value="submit">
                             </div>
                         </form>
+                    </div>
                 </div>
+
+                <div class = "details-container">
+                    <div class = "details-title">
+                        Recent Submissions
+                    </div>
+                    <div>
+                        <table style = "font-size : 0.8rem; padding:0">
+                            <thead>
+                                <th style = "width : 10%; font-size:1rem">ID</th>
+                                <th style = "width : 40%; font-size:1rem">Time</th>
+                                <th style = "font-size:1rem">Verdict</th>
+                            </thead>
+                            <tbody>
+                                {% for submission in submissions %}
+                                    <tr>
+                                        <td style = "width : 10%; text-decoration:underline"><a href="{% url "submission" submission.id %}">{{submission.id}}</a></td>
+                                        <td style = "width : 40%">{{submission.submission_time|date:"Y-m-d H:i"}}</td>
+                                        <td>{{submission.verdict}}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 
             </div>
         </div>
+    </div>
+    <div id = "hope">
+        Hopes alive.
     </div>
 {% endblock content %}
 
@@ -128,5 +158,26 @@
         
     </script>
     <script>
+        if("{{verdict}}"){
+            showToast("Result : " + "{{verdict}}", "info")
+        }
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    function updateData() {
+        $.ajax({
+            url: '/hope/',
+            method: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                $('#hope').text(data.value);
+            }
+        });
+    }
+    setInterval(updateData, 100);
+});
+</script>
 {% endblock add_js_file %}

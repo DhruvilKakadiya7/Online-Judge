@@ -1,0 +1,72 @@
+#submission-header td:first-child{
+    width: 200px;
+}
+
+.submission-div{
+    border: 2px solid var(--color-a);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#submission-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+pre{
+    font-size: 1rem;
+}
+
+.submission-header{
+    border-bottom: 2px solid var(--color-a);
+    padding-bottom: 5px;
+}
+#source_code_pre pre{
+    margin: 0;
+    padding: 0;
+}
+#source_code_pre pre:first-child{
+    margin-top: 10px;
+}
+#source_code_pre pre:hover{
+    background-color: var(--color-a-theme-1);
+}
+
+
+
+#submission-tc-result th{
+    font-size: 1.2rem;
+    color: var(--color-a);
+}
+
+#submission-tc-result tr{
+    border: 1px solid var(--color-b);
+}
+
+#submission-tc-result th , #submission-tc-result td{
+    border: 1px solid var(--color-b);
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+}
+#submission-tc-result tr:nth-of-type(even){
+    background-color: var(--color-a-theme-1);
+}
+
+#submission-tc-result tbody tr:nth-of-type(odd){
+    background-color: var(--color-a-theme-2);
+}
+
+#submission-tc-result td:nth-child(1){
+    width: 33%;
+}
+#submission-tc-result td:nth-child(2){
+    width: 33%;
+}
+
+pre{
+    text-align: left;
+}

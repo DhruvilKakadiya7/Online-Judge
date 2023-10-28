@@ -28,7 +28,7 @@ function darkTheme(){
     root.style.setProperty('--color-a-theme-2', 'rgb(67, 66, 66)');
     root.style.setProperty('--color-b', 'yellow');
     root.style.setProperty('--color-c', 'white');
-    root.style.setProperty('background-color', '#000000');
+    root.style.setProperty('background-color', '#001524');
 }
 
 function toggleTheme(){
@@ -55,3 +55,17 @@ target.addEventListener("click" , function(){
 })
 
 applyTheme()
+
+
+function setUserID(id){
+    window.localStorage.setItem("algobooth_user_id" , JSON.stringify(id))
+}
+
+function getUserID(id){
+    let result = window.localStorage.getItem("algobooth_user_id")
+    return JSON.parse(result)
+}
+
+if(getUserID){
+    
+}

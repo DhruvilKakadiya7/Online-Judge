@@ -10,8 +10,9 @@ testcaseBtn.addEventListener("click" , function(){
     gap: 10px;`
     testCases.innerHTML += `
     <div style = "${style}">
-        <textarea name = ${"input" + cnt} rows="" cols=""></textarea>
-        <textarea name = ${"output" + cnt} rows="" cols=""></textarea>
+        <textarea style = "flex:3" name = ${"input" + cnt} rows="" cols=""></textarea>
+        <textarea style = "flex:3" name = ${"output" + cnt} rows="" cols=""></textarea>
+        <input style = "flex:1" type = "checkbox" name = ${"show" + cnt} class = "tc-checkbox">
     </div>
     `    
 

@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+{% block add_css_file %}
+    <link href='{% static "styles/submission.css" %}' rel="stylesheet">    
+{% endblock add_css_file %}
+%{% block title %}Submission{% endblock title %}%
+
+{% block content %}
+    <div id = "submission-container">
+        <div id = "submission-header" class = "submission-div">
+            <table>
+                <tr>
+                    <td>Submitted By</td>
+                    <td>Urvik Jada</td>
+                </tr>
+                <tr>
+                    <td>Submission Time</td>
+                    <td>{{submission.submission_time}}</td>
+                </tr>
+                <tr>
+                    <td>Problem</td>
+                    <td><a href="{% url "problem_details" problem.id %}">{{problem.id}}. {{problem.name}}</a></td>
+                </tr>
+                <tr>
+                    <td>Language</td>
+                    <td>{{submission.language}}</td>
+                </tr>
+                <tr>
+                    <td>Verdict</td>
+                    <td>{{submission.verdict}}</td>
+                </tr>
+            </table>
+        </div>
+        <div id = "submission-code" class = "submission-div">
+            <div class = "submission-header">
+                Source Code 
+            </div>
+            <div id = "source_code_pre">
+{% for line in source_code %}
+<pre>{{line}}</pre>
+{% endfor %}
+            </div>
+        </div>
+        <div id = "submission-tc-result" class = "submission-div">
+            <div class = "submission-header" style = "margin-bottom:16px">
+                Test Cases Result
+            </div>
+            <table>
+                <thead>
+                    <th>Test Case No.</th>
+                    <th>Verdict</th>
+                    <th>Details</th>
+                </thead>
+                <tbody>
+                    {% for tc_result in testcase_results %}
+                        <tr>
+                            <td><a href="{% url "testcase" submission.id tc_result.tc_id %}">{{tc_result.problem_tc_id}}</a></td>
+                            <td>{{tc_result.verdict}}</td>
+                            <td>{{tc_result.details}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% if compilation_error %}
+            <div id = "compilation-error" class = "submission-div">
+                <div class = "submission-header">
+                    Compilation Error
+                </div>
+                <pre>
+{{compilation_error}}
+                </pre>
+            </div>
+        {% endif %}
+    </div>
+{% endblock content %}
+
+
+{% block add_js_file %}
+    <script>
+    </script>
+{% endblock add_js_file %}

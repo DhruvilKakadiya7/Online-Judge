@@ -1,7 +1,10 @@
-// let input_copy_btn = document.getElementById("input-copy-btn")
-// let output_copy_btn = document.getElementById("output-copy-btn")
+let btn = document.getElementById("submit-btn")
 
-
-// input_copy_btn.addEventListener("click" , function(){
-//     navigator.clipboard.writeText("done")
-// })
+btn.addEventListener("click" , function(){
+    if(document.getElementById("id_source_file").files.length > 0){
+        showToast("File submitted" , "info")
+    }
+    else{
+        showToast("Select the file" , "error")
+    }
+})

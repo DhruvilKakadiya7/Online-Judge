@@ -10,6 +10,9 @@
         <div id = "problem-title">
             Problem Page
         </div>
+        <div id = "temp">
+            
+        </div>
         <div id = "sub-container">
             <div id = "left-side">
                 <div id = "problem-list-container">
@@ -83,12 +86,28 @@
     <script src = {% static "scripts/problem_page.js" %}>
         
     </script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <script>
+        function convertEscapeSequencesToTags(text) {
+            // Define a mapping of HTML escape sequences to their corresponding HTML tags
+            const escapeSequenceToTag = {
+                '&lt;': '<',
+                '&gt;': '>',
+              };
+      
+            // Replace escape sequences with their corresponding HTML tags
+            return text.replace(/&lt;|&gt;/g, (match) => escapeSequenceToTag[match]);
+          }
+
         if("{{rating_from}}"){
             showToast("Filter Updated" , "info")
         }
         else{
             console.log("else");
         }
+
+        document.getElementById("temp").innerHTML = `{{temp}}`;
     </script>
 {% endblock add_js_file %}

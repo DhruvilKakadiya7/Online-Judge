@@ -46,5 +46,8 @@
         if("{{info}}"){
             showToast("{{info}}" , "error")
         }
+        document.getElementById("id_user_name").addEventListener("change" , function(){
+            setUserID(document.getElementById("id_user_name").value)
+        })
     </script>
 {% endblock add_js_file %}

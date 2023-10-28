@@ -1,0 +1,4 @@
+G:\SEM-7\ADF\FINAL PROJECT\AlgoBooth\media\source_codes/code_8PRfwMU.cpp: In function 'int main()':
+G:\SEM-7\ADF\FINAL PROJECT\AlgoBooth\media\source_codes/code_8PRfwMU.cpp:8:1: error: expected ';' before '}' token
+ }
+ ^

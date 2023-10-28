@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% block add_css_file %}
+    <link href='{% static "styles/my_submissions.css" %}' rel="stylesheet">    
+    <link href='{% static "styles/profile_page.css" %}' rel="stylesheet">    
+{% endblock add_css_file %}
+%{% block title %}My Submissions{% endblock title %}%
+
+{% block content %}
+    <div id = "my-submissions-container">
+        <div id = "problem-list-container">
+            <div>
+                <table id = "problem-list-table">
+                    <thead>
+                        <tr>
+                            <th>Submission ID</th>
+                            <th>Submission Time</th>
+                            <th>Language</th>
+                            <th>User Name</th>
+                            <th>Problem Name</th>
+                            <th>Verdict</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for submission in submissions %}
+                            <tr>
+                                <td><a href="{% url "submission" submission.id %}">{{submission.id}}</a></td>
+                                <td>{{submission.submission_time}}</td>
+                                <td>{{submission.language}}</td>
+                                <td>{{submission.user_id}}</td>
+                                <td>{{submission.problem_id}}</td>
+                                <td>{{submission.verdict}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+
+{% block add_js_file %}
+    <script>
+    </script>
+{% endblock add_js_file %}
