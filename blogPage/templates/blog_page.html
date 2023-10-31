@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static %}
+{% block add_css_file %}
+    <link href='{% static "styles/problem_page.css" %}' rel="stylesheet">    
+{% endblock add_css_file %}
+%{% block title %}Blog Page{% endblock title %}%
+
+{% block content %}
+    <div id = "problem-page-container">
+        <div id = "problem-title">
+            Blog Page
+        </div>
+        <div id = "temp">
+            
+        </div>
+        <div id = "sub-container">
+            <div id = "left-side">
+                <div id = "problem-list-container">
+                    <table id = "problem-list-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Blog Title</th>
+                                <th>Author</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for blog in blog %}
+                                <tr>
+                                    <td>{{blog.id}}</td>
+                                    <td><a href="{% url 'blog_details' blog.id %}">{{blog.title}}</a></td>
+                                     <td>{{blog.author}}</td> 
+                                     
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id = "right-side">
+                <div class = "right-side-sub-container">
+                    <div class = "sub-container-title">
+                        Filter
+                    </div>
+                    <div id = "filter-container" class = "vertical-flex-div">
+                        <form method = "post">
+                            {% csrf_token %}
+                            <div class = "vertical-flex-div">
+                                <div class = "range-div">
+                                    <label for="">Most Voted</label>
+                                    <div class = "horizontal-flex-div">
+                                        <select name="filter1">
+                                            <option value="htl">Highest to Lowest</option>
+                                            <option value="lth">Lowest to Highest</option>
+                                        </select>
+                        
+                                       
+                                    </div>
+                                </div>
+                                <div class = "range-div">
+                                    <label for="">Blog Added</label>
+                                    <div class = "horizontal-flex-div">
+                                        <select name="filter2">
+                                            <option value="nto">Newest to Oldest</option>
+                                            <option value="otn">Oldest to Newest</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <input class = "btn" type="submit" name="submit" value="Apply">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+{% endblock content %}
+
+
+{% block add_js_file %}
+    <script src = {% static "scripts/problem_page.js" %}>
+        
+    </script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    {% comment %} <script>
+        function convertEscapeSequencesToTags(text) {
+            // Define a mapping of HTML escape sequences to their corresponding HTML tags
+            const escapeSequenceToTag = {
+                '&lt;': '<',
+                '&gt;': '>',
+              };
+      
+            // Replace escape sequences with their corresponding HTML tags
+            return text.replace(/&lt;|&gt;/g, (match) => escapeSequenceToTag[match]);
+          }
+
+        if("{{rating_from}}"){
+            showToast("Filter Updated" , "info")
+        }
+        else{
+            console.log("else");
+        }
+
+        document.getElementById("temp").innerHTML = `{{temp}}`;
+    </script> {% endcomment %}
+{% endblock add_js_file %}

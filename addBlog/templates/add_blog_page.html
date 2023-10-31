@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block add_css_file %}
+    <link href='{% static "styles/add_problem_page.css" %}' rel="stylesheet">    
+    <link href='{% static "styles/problem_page.css" %}' rel="stylesheet">    
+{% endblock add_css_file %}
+%{% block title %}Add Blog{% endblock title %}%
+
+{% block content %}
+    <div id = "problem-page-container">
+        <div id = "problem-title">
+            Add Blog Page
+        </div>
+        <div id = "sub-from-container">
+            <form method = "post">
+                {% csrf_token %}
+                <div id = "form-container">
+                    {% for field in form.visible_fields %}
+                        <div class = "form-div">
+                            <div class = "label-div">
+                                {{field.label_tag}}
+                            </div>
+                            
+
+                            
+                            <div class = "input-div">
+                                {{field}}
+                            </div>
+                             
+
+                            
+                            
+                        </div>
+                    {% endfor %}
+                </div>
+                </div>
+                <div style = "text-align:center">
+                    <input type="submit" id = "submit-btn" value = "Add blog"/>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
+
+
+{% block add_js_file %}
+    <script src = {% static "scripts/add_problem.js" %}>
+        
+    </script>
+{% endblock add_js_file %}

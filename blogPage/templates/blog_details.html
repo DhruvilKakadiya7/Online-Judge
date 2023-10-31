@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+{% block add_css_file %}
+    <link href='{% static "styles/blog_page.css" %}' rel="stylesheet">    
+{% endblock add_css_file %}
+%{% block title %}Blog Details{% endblock title %}%
+
+{% block content %}
+    <div id = "problem-page-container">
+        
+        <div id = "problem-title">
+            {{blog.title}}
+        </div>
+        <div id = "sub-container">
+            <div id = "left-side" class = "problem-details-left-side">
+
+                <div class = "sub-section-title">
+                    Blog Content
+                </div>
+                <div class = "sub-section-content" id = "problem-statement">
+                    {{blog.content|linebreaksbr}}
+                </div>
+                <div class = "sub-section-title">
+                    Attachement
+                </div>
+                <div class = "sub-section-content" id = "problem-statement">
+                    {{blog.content|linebreaksbr}}
+                </div>
+                <div class = "sub-section-title">
+                    Likes
+                </div>
+                <div class = "sub-section-content" id = "problem-statement">
+                    {{likes|linebreaksbr}}
+                    <a href="{% url 'blog_likes' blog.id %}">Like</a>
+                </div>
+                <div class = "sub-section-title">
+                    Dislikes
+                </div>
+                <div class = "sub-section-content" id = "problem-statement">
+                    {{dislikes|linebreaksbr}}
+                    <a href="{% url 'blog_dislikes' blog.id %}">Dislike</a>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    
+    
+{% endblock content %}
+
+
+{% block add_js_file %}
+    <script src = {% static "scripts/problem_page.js" %}>
+        
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+{% endblock add_js_file %}
