@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from addBlog.models import Blog
 from .models import Like, Dislike
 from django.urls import reverse
+from django.utils import timezone
 # Create your views here.
 def blog_page(request) :
     
@@ -33,8 +34,10 @@ def blog_details(request , id) :
     blog = Blog.objects.filter(id = id).get()
     likes = Like.objects.filter(blog=blog).count()
     dislikes = Dislike.objects.filter(blog=blog).count()
-    return render(request , "blog_details.html", {'blog' : blog ,'likes' : likes, 'dislikes': dislikes})
-
+    count = likes-dislikes
+    current_date = timezone.now()
+    days = (current_date - blog.added_date).days
+    return render(request , "blog_details.html", {'blog' : blog ,'likes' : likes, 'dislikes': dislikes,'count': count,'days':days})
 
 def blog_likes(request , id) :
     user = request.user
