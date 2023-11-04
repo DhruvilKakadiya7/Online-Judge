@@ -4,7 +4,7 @@
     --color-a-theme-1: rgb(34, 34, 34);
     --color-a-theme-2: rgb(67, 66, 66);
     --color-b: yellow;
-    --color-c: white;
+    --color-c: rgb(255, 255, 255);
     font-family: 'Mooli', sans-serif;
     background-color: #001524;
     color: var(--color-b);

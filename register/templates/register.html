@@ -46,4 +46,19 @@
 {% block add_js_file %}
     <script src ={% static "scripts/register.js" %}>
     </script>
-{% endblock add_js_file %}
+{% endblock add_js_file %} 
+
+{% comment %} {% extends "base.html" %}
+
+{% block content %}
+  <h2>Register</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Register</button>
+  </form>
+{% endblock %} {% endcomment %}
+
+
+
+

@@ -32,8 +32,12 @@
                     </div>
                     <div class = "vertical-line"></div>
                     <div class = "nav-item">
-                        <a href="{% url "dashboard" %}">Section</a>
+                        <a href="{% url "add_blog_page" %}">Add Blog</a>
                     </div>
+                    <div class = "vertical-line"></div>
+                    <div class = "nav-item">
+                        <a href="{% url "blog_page" %}">Blog Page</a>
+                    </div> 
                     <div class = "vertical-line"></div>
                     <div class = "nav-item">
                         <a href="{% url "my_submissions" 1 %}">My submissions</a>
@@ -43,9 +47,14 @@
                         <a href="{% url "profile_page" %}">Profile</a>
                     </div>
                 </div>
+                
+                {% if user.is_authenticated %}
+                <a href="{% url "profile_page" %}"><h4>{{user}}</h4></a>
+                {%else%}
                 <div class = "nav-item" id = "nav-item-login">
                     <a href="{% url "login" %}">Login</a>
                 </div>
+                {%endif%}
                 <div title = "Change Theme" class = "nav-item" id = "change-theme">
                     <img class = "icons" src="{% static "icons/theme.svg" %}" alt="">
                 </div>

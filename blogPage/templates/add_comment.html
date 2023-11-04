@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% load static %}
+{% block add_css_file %}
+<link href='{% static "styles/blog_page.css" %}' rel="stylesheet">
+{% endblock add_css_file %}
+%{% block title %}Blog Details{% endblock title %}%
+
+{% block content %}
+<div id="problem-page-container">
+
+    <div id="problem-title">
+        {{blog.title}}
+    </div>
+    <div id="sub-container">
+        <div id="left-side" class="problem-details-left-side">
+
+            <div class="sub-section-title">
+                Blog Content
+            </div>
+            <div class="sub-section-content" id="problem-statement">
+                {{blog.content|linebreaksbr}}
+            </div>
+            <div class="sub-section-title">
+                Attachement
+            </div>
+            <div class="sub-section-content" id="problem-statement">
+                {{blog.content|linebreaksbr}}
+            </div>
+        </div>
+
+    </div>
+    <div id="sub-container">
+        <div id="left-side" class="problem-details-left-side">
+
+            <!-- <div class = "sub-section-title">
+                    Likes
+                </div> -->
+            <div class="sub-section-content-like" id="problem-statement">
+                <a href="{% url 'blog_likes' blog.id %}"><svg xmlns="http://www.w3.org/2000/svg" height="2em"
+                        viewBox="0 0 320 350"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path fill="#32CD32"
+                            d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z" />
+                    </svg></a>
+                +{{count|linebreaksbr}}
+                <a href="{% url 'blog_dislikes' blog.id %}"><svg xmlns="http://www.w3.org/2000/svg" height="2em"
+                        viewBox="0 0 320 350"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path fill="#FF0000"
+                            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z" />
+                    </svg></a>
+
+                <a href="{% url 'profile_page'%}" style="text-decoration: none;"> <svg
+                        xmlns="http://www.w3.org/2000/svg" height="1.5em"
+                        viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path fill="#ffffff"
+                            d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                    </svg> {{blog.author}}</a>
+
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.5em"
+                    viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path fill="#ffffff"
+                        d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z" />
+                </svg>
+                {% if days == 1 %}
+                    {{days}} day ago
+                {% else %}
+                    {{days}} days ago
+                {% endif %}
+
+                
+            </div>
+        </div>
+
+    </div>
+
+   
+
+<h2>Comments</h2>
+comment_page
+<ul>
+    {% for comment in comments %}
+        <li>
+            {{ comment.text }}
+            <a href="{% url 'add_comment' blog.id comment.id %}">Reply</a>
+            <ul>
+                {% with comment.children.all as replies %}
+                    {% if replies %}
+                        {% for reply in replies %}
+                            <li>
+                                hey
+                                {{ reply.text }}
+                                <a href="{% url 'add_comment' blog.id reply.id %}">Reply</a>
+                            </li>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
+
+<h2>Add a Comment</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Comment</button>
+    </form>
+
+</div>
+
+
+{% endblock content %}
+
+
+{% block add_js_file %}
+<script src={% static "scripts/problem_page.js" %}>
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+{% endblock add_js_file %}
