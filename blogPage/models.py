@@ -19,3 +19,11 @@ class Dislike(models.Model):
 #     created_at = models.DateTimeField(auto_now_add=True)
 
 
+    
+class Comment(models.Model):
+    text = models.TextField()
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
+    parent_comment = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    
