@@ -39,24 +39,78 @@ def blog_details(request , id) :
     current_date = timezone.now()
     days = (current_date - blog.added_date).days
     comments = Comment.objects.filter(blog=blog)
+    
+    
     # Assuming you've already fetched your comments
-    comment_dict = {}
+    # comment_dict = {}
 
-    for comment in comments:
-        # print(comment.parent_comment)
-        if comment.parent_comment is None:
-            # This is a top-level comment
-            comment_dict[comment] = []
+    # for comment in comments:
+    #     # print(comment.parent_comment)
+    #     if comment.parent_comment is None:
+    #         # This is a top-level comment
+    #         comment_dict[comment] = []
+            
+            
+    # hope = []
+    
+    # for comment in comments :
+    #     level = []
+    #     print(comment.text)
+    #     origin_comment = comment
+    #     while comment.parent_comment != None :
+    #         level.append("hope")
+    #         comment = comment.parent_comment
+    #         if comment == None : break
+    #         print(" " * len(level) + comment.text)
+    #     hope.append({
+    #         "comment" : origin_comment,
+    #         "level" : level
+    #     })
+    
+    
+    mapping_to_comments = {}
+    
+    adj = {}
+    
+    for comment in comments :
+        parent = comment.parent_comment
+        mapping_to_comments[comment.id] = comment
+        if parent == None :
+            continue
+        if parent.id not in adj.keys() :
+            adj[parent.id] = []
+        adj[parent.id].append(comment.id)
+        
+        
+    hope_2 = []
+    
+    visited = {}
+    
+    def dfs(node , level) :
+        visited[node] = True
+        hope_2.append({
+            "comment" : mapping_to_comments[node],
+            "level" : [0 for _ in range(level)]})
+        if node not in adj.keys() :
+            return
+        for child in adj[node] :
+            dfs(child , level + 1)
+            
+    for comment in comments :
+        if comment.id not in visited.keys() :
+            dfs(comment.id , 0)
+    
+    
 
-    for comment in comments:
-        print(comment)
-        if comment.parent_comment is not None and comment.parent_comment in comment_dict:
-            # This comment is a reply to an existing comment
-            comment_dict[comment.parent_comment].append(comment)
+    # for comment in comments:
+    #     print(comment)
+    #     if comment.parent_comment is not None and comment.parent_comment in comment_dict:
+    #         # This comment is a reply to an existing comment
+    #         comment_dict[comment.parent_comment].append(comment)
     # print(comment_dict)
 # Pass comment_dict to the template
 
-    return render(request , "blog_details.html", {'blog' : blog ,'likes' : likes, 'dislikes': dislikes,'count': count,'days':days,'comment_dict':comment_dict,'comments':comments})
+    return render(request , "blog_details.html", {'blog' : blog ,'likes' : likes, 'dislikes': dislikes,'count': count,'days':days,'hope' : hope_2})
 
 def blog_likes(request , id) :
     user = request.user
@@ -99,7 +153,7 @@ def blog_dislikes(request , id) :
 
 
 
-def add_comment(request, blog_id, comment_id):
+def add_comment(request, blog_id, comment_id = None):
     # Get the blog post
     blog = get_object_or_404(Blog, id=blog_id)
 

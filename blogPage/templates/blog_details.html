@@ -75,23 +75,17 @@
    
 
 <h2>Comments</h2>
-blog_page
-<ul>
-    {% for top_comment, replies in comment_dict.items %}
-        <li>
-            {{ top_comment.text }}
-            <a href="{% url 'add_comment' blog.id top_comment.id %}">Reply</a>
-            <ul>
-                {% for reply in replies %}
-                    <li>
-                        {{ reply.text }}
-                        <a href="{% url 'add_comment' blog.id reply.id %}">Reply</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </li>
+
+<div>
+    {% for item in hope %}
+        {% for h in item.level %}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        {% endfor %}
+        {{item.comment.text}}
+        &nbsp;&nbsp;<a href="{% url 'add_comment' blog.id item.comment.id %}">Reply</a>
+        <br>
     {% endfor %}
-</ul>
+</div>
 
 
 <a href="{% url 'add_comment' blog.id%}">Add Comment</a>
