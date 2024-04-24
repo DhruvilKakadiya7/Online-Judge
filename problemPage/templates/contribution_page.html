@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block add_css_file %}
+    <link href='{% static "styles/standing_page.css" %}' rel="stylesheet">    
+{% endblock add_css_file %}
+%{% block title %}Contribution{% endblock title %}%
+
+{% block content %}
+    <div id = "standing-container">
+        <div id = "header">
+            Contribution
+        </div>
+        <div id = "standing-header" class = "submission-div">
+            <table>
+                <thead>
+                    <th>User Id</th>
+                    <th>User Name</th>
+                    <th>Contribution</th>
+                    <th>Blog Written</th>
+                </thead>
+                <tbody>
+                    {% for row in data %}
+                        <tr>
+                            <td>{{row.id}}</td>
+                            <td>{{row.name}}</td>
+                            <td>{{row.contribution}}</td>
+                            <td>{{row.blogs}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock content %}
+
+
+{% block add_js_file %}
+    <script>
+    </script>
+{% endblock add_js_file %}

@@ -10,6 +10,11 @@
     color: var(--color-b);
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+}
+
 .icons{
     height: 1.6rem;
     width: auto;
@@ -20,8 +25,9 @@
 }
 
 #root{
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #navbar{
@@ -87,4 +93,74 @@
 
 #change-theme{
     cursor: pointer;
+}
+
+
+#profile-select{
+    border: none;
+    height: 2lh;
+}
+
+#profile-select option{
+    font-size: 1.2rem;
+    width: 100px;
+}
+
+#profile-select option{
+    background-color: red;
+}
+
+.select-hidden{
+    display: none;
+}
+
+
+#my-select{
+    display: flex;
+    align-items: center;
+}
+
+
+#drop-icon{
+    position: relative;
+    top: -5px;
+}
+
+
+
+#menu{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+    padding: 5px 10px;
+}
+
+#menu{
+    display: none;
+}
+
+#menu div{
+    border: 2px solid var(--color-a);
+    padding: 5px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+#menu div:hover{
+    background-color: var(--color-a-theme-1);
+}
+
+#menu div a{
+    text-decoration: none;
+}
+
+#profile-picture-nav{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 100%;
+    border: 1px solid var(--color-a);
 }

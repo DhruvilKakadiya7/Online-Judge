@@ -2,13 +2,14 @@
 {% load static %}
 {% block add_css_file %}
     <link href='{% static "styles/problem_page.css" %}' rel="stylesheet">    
+    <link href='{% static "styles/blog_page.css" %}' rel="stylesheet">    
 {% endblock add_css_file %}
 %{% block title %}Blog Page{% endblock title %}%
 
 {% block content %}
     <div id = "problem-page-container">
         <div id = "problem-title">
-            Blog Page
+            Blogs
         </div>
         <div id = "temp">
             
@@ -22,7 +23,7 @@
                                 <th>ID</th>
                                 <th>Blog Title</th>
                                 <th>Author</th>
-                                
+                                <th>Created Date</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -30,8 +31,8 @@
                                 <tr>
                                     <td>{{blog.id}}</td>
                                     <td><a href="{% url 'blog_details' blog.id %}">{{blog.title}}</a></td>
-                                     <td>{{blog.author}}</td> 
-                                     
+                                    <td>{{blog.author}}</td> 
+                                    <td>{{blog.added_date|date:"Y-m-d H:i:s"}}</td> 
                                 </tr>
                             {% endfor %}
                         </tbody>
@@ -54,8 +55,6 @@
                                             <option value="htl">Highest to Lowest</option>
                                             <option value="lth">Lowest to Highest</option>
                                         </select>
-                        
-                                       
                                     </div>
                                 </div>
                                 <div class = "range-div">
@@ -80,9 +79,6 @@
 
 
 {% block add_js_file %}
-    <script src = {% static "scripts/problem_page.js" %}>
-        
-    </script>
     <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>

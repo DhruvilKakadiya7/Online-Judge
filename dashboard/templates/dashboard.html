@@ -1,9 +1,117 @@
 {% extends "base.html" %}
 {% load static %}
 {% block add_css_file %}
-    <link href='{% static "styles.css" %}' rel="stylesheet">    
+    <link href='{% static "styles/dashboard.css" %}' rel="stylesheet">    
 {% endblock add_css_file %}
 %{% block title %}Dashboard{% endblock title %}%
 {% block content %}
-    This is my dashboard
+    <div id = "heading">
+        <span class = "first">A</span>lgo<span class = "first">B</span>ooth
+    </div>
+    <div id = "outer">
+        <div id = "left">
+            <div id = "recent-problem">
+                <div class = "recent-div blink-animation">
+                    New Problem
+                </div>
+                <div id = "problem">
+                    <div id = "title">
+                        <div id = "id">
+                            {{problem.id}}
+                        </div>
+                        <div id = "name">
+                            {{problem.name}}
+                        </div>
+                    </div>
+                    <div id = "footer">
+                        <div id = "submissions">
+                            Submisssions | {{submissions}}
+                        </div>
+                        <div id = "accepted">
+                            Accepted | {{ac}}
+                        </div>
+                        <div id = "accuracy">
+                            Accuracy | {{accuracy}} %
+                        </div>
+                        <div id = "problem-link">
+                            <a href="{% url 'problem_details' problem.id %}">Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id = "recent-blog">
+                <div class = "recent-div blink-animation">
+                    New Blog
+                </div>
+                <div id = "blog">
+                    <div id = "b-title">
+                        <div id = "b-id">
+                            {{blog.id}}
+                        </div>
+                        <div id = "b-name">
+                            {{blog.title}}
+                        </div>
+                    </div>
+                    <div id = "footer">
+                        <div id = "submissions">
+                            Author | {{blog.author}}
+                        </div>
+                        <div id = "accepted">
+                            Votes | {{vote}}
+                        </div>
+                        <div id = "accuracy">
+                            Comments | {{comment_count}}
+                        </div>
+                        <div id = "problem-link">
+                            <a href="{% url 'blog_details' blog.id %}">Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id = "right">
+            <div id = "top-rank" class = "right-div">
+                <div class = "table-heading">
+                    Top 5 Solver
+                </div>
+                <table>
+                    <thead>
+                        <th>Rank</th>
+                        <th>User</th>
+                        <th>Solved</th>
+                    </thead>
+                    <tbody>
+                        {% for row in ranks %}
+                            <tr>
+                                <td>{{row.rank}}</td>
+                                <td>{{row.name}}</td>
+                                <td>{{row.ac}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div id = "top-contributors" class = "right-div">
+                <div class = "table-heading">
+                    Top 5 Contributors
+                </div>
+                <table>
+                    <thead>
+                        <th>Rank</th>
+                        <th>User</th>
+                        <th>Contribution</th>
+                    </thead>
+                    <tbody>
+                        {% for row in contributions %}
+                            <tr>
+                                <td>{{row.rank}}</td>
+                                <td>{{row.name}}</td>
+                                <td>{{row.contribution}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 {% endblock content %}

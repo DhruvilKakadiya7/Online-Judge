@@ -1,0 +1,4 @@
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/compilation_error_edHOHqI.cpp: In function 'int main()':
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/compilation_error_edHOHqI.cpp:8:1: error: expected ';' before '}' token
+ }
+ ^

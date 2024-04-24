@@ -13,36 +13,46 @@
                     {{user}}
                 </div>
                 <div id = "profile-name">
-                    Urvik Jada
+                    {{user.first_name}} {{user.last_name}}
                 </div>
                 <div id = "profile-location">
-                    Botad India
+                    {{user.country}}
                 </div>
                 <div id = "profile-org">
-                    Nirma University
+                    {{user.university_name}}
                 </div>
+               
                 <div>
                     <table>
                         <tr>
                             <td><img class = "icons" src="{% static "icons/problem_solved.svg" %}" alt=""></td>
                             <td>Problem Solved</td>
-                            <td>10</td>
+                            <td>{{ problem_solved }}</td>
                         </tr>
                         <tr>
                             <td><img class = "icons" src="{% static "icons/blog.svg" %}" alt=""></td>
                             <td>Blog Written</td>
-                            <td>7</td>
+                            <td>{{ blog_count }}</td>
                         </tr>
                         <tr>
                             <td><img class = "icons" src="{% static "icons/star.svg" %}" alt=""></td>
                             <td>Contribution</td>
-                            <td>+156</td>
+                            <td>{{contribution}}</td>
                         </tr>
                     </table>
                 </div>
+
+                <div id = "new-blog-link">
+                    <a href="{% url "add_blog_page" %}">Write new blog</a>
+                    <a href="{% url "my_submissions" 1 %}">My submissions</a>
+                </div>
             </div>
             <div id = "profile-details-right">
-                <img src={% static "jubhai.jpg" %} alt="Loading profile photo">
+                {% if user.profile_image %}
+                <img src="{{ user.profile_image.url }}" alt="Loading profile photo">
+                {% else %}
+                <img src="\media\profile_image\blank-profile-picture.png" alt="Default Image">
+                {% endif %}
             </div>
         </div>
         

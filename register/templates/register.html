@@ -46,6 +46,15 @@
 {% block add_js_file %}
     <script src ={% static "scripts/register.js" %}>
     </script>
+    <script>
+        console.log("{{info}}");
+        if("{{info}}"){
+            showToast("{{info}}" , "error")
+        }
+        else{
+            console.log("else");
+        }
+    </script>
 {% endblock add_js_file %} 
 
 {% comment %} {% extends "base.html" %}

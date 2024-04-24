@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block add_css_file %}
+    <link href='{% static "styles/standing_page.css" %}' rel="stylesheet">    
+{% endblock add_css_file %}
+%{% block title %}Leaderboard{% endblock title %}%
+
+{% block content %}
+    <div id = "standing-container">
+        <div id = "header">
+            Leaderboard
+        </div>
+        <div id = "standing-header" class = "submission-div">
+            <table>
+                <thead>
+                    <th>User Id</th>
+                    <th>User Name</th>
+                    <th>Problem Solved</th>
+                    <th>Submission Count</th>
+                </thead>
+                <tbody>
+                    {% for row in data %}
+                        <tr>
+                            <td>{{row.id}}</td>
+                            <td>{{row.name}}</td>
+                            <td>{{row.ac}}</td>
+                            <td>{{row.all}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock content %}
+
+
+{% block add_js_file %}
+    <script>
+    </script>
+{% endblock add_js_file %}

@@ -3,17 +3,15 @@
 {% block add_css_file %}
     <link href='{% static "styles/problem_page.css" %}' rel="stylesheet">    
 {% endblock add_css_file %}
-%{% block title %}Register{% endblock title %}%
+%{% block title %}Problem{% endblock title %}%
 
 {% block content %}
     <div id = "problem-page-container">
-        
         <div id = "problem-title">
             {{problem.name}}
         </div>
         <div id = "sub-container">
             <div id = "left-side" class = "problem-details-left-side">
-
                 <div class = "sub-section-title">
                     Problem Statement
                 </div>
@@ -73,6 +71,9 @@
                 
             </div>
             <div id = "right-side">
+                <div id = "pdf-div">
+                    <a type="submit" href = "{% url 'download_file' problem.id %}" name="download" value="" href = "https:google.com">Download Pdf File</a>
+                </div>
                 <div class = "details-container">
                     <div class = "details-title">
                         Prolem details
@@ -85,11 +86,11 @@
                             </tr>
                             <tr>
                                 <td>Total submissions</td>
-                                <td>10</td>
+                                <td>{{submission_count}}</td>
                             </tr>
                             <tr>
                                 <td>Accepted</td>
-                                <td>8</td>
+                                <td>{{accepted_count}}</td>
                             </tr>
                         </table>
                     </div>

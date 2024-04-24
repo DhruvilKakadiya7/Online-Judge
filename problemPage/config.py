@@ -16,5 +16,5 @@ def getMessage(id) :
     }
     return decode[id]
 
-BASE_DIR = "G:\\SEM-7\\ADF\\FINAL PROJECT\\AlgoBooth\\media\\"
+BASE_DIR = "G:\\SEM-7\\ADF\\FINAL PROJECT\\HOPE 2.0\\algobooth-adf\\media\\"
 

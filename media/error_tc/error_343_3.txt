@@ -1,0 +1,2 @@
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/time_limit_exceeded_ByzpHAB.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status

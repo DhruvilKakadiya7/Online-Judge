@@ -1,0 +1,109 @@
+#heading{
+    text-align: center;
+    font-size: 3.6rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.first{
+    color: var(--color-a);
+}
+#outer{
+    display: flex;
+}
+
+#left{
+    width: 65%;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+
+#right{
+    width: 30%;
+}
+#footer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+#title, #b-title{
+    display: flex;
+    gap: 20px;
+    font-size: 1.4rem;
+}
+
+#id, #b-id{
+    padding-right: 20px;
+    border-right: 2px solid var(--color-b);
+}
+
+#recent-problem{
+}
+
+#problem, #blog{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 2px solid var(--color-a);
+    border-radius: 5px;
+}
+
+#left{
+    padding-right: 30px;
+    border-right: 2px solid var(--color-b);
+}
+
+#right{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.right-div{
+    padding: 10px;
+    border: 2px solid var(--color-a);
+    border-radius: 5px;
+}
+
+.table-heading{
+    border-bottom: 2px solid var(--color-b);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.recent-div{
+    color: red;
+    margin-bottom: 5px;
+}
+
+.blink-animation{
+    animation: blink 2s infinite
+}
+
+#right{
+    padding: 20px;
+    padding-left: 30px;
+}
+
+#left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.table-heading{
+    text-align: center;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}

@@ -26,8 +26,9 @@ from .models import CustomUser
 class UserRegistrationForm(UserCreationForm):
     class Meta:
         model = CustomUser
-        fields = ('username', 'email')
+        fields = ('username', 'email','first_name','last_name')
 
 class UserLoginForm(AuthenticationForm):
     class Meta:
         model = CustomUser
+        

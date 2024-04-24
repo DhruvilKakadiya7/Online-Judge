@@ -55,7 +55,7 @@ def add_problem_page(request) :
             show_name = "show" + str(cnt)
             show = False
             
-            BASE_DIR = "G:\\SEM-7\\ADF\\FINAL PROJECT\\AlgoBooth\\media\\"
+            BASE_DIR = "G:\\SEM-7\\ADF\\FINAL PROJECT\\HOPE 2.0\\algobooth-adf\\media\\"
             createDirectory(os.path.join(BASE_DIR , "input_tc\\" + str(problem.id)))
             createDirectory(os.path.join(BASE_DIR , "output_tc\\" + str(problem.id)))
             input_file_path = os.path.join(BASE_DIR , "input_tc\\" + str(problem.id) + "\\" + "input_" + str(cnt))

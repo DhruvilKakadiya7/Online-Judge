@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+{% load static %}
+{% block add_css_file %}
+    <link href='{% static "styles/problem_page.css" %}' rel="stylesheet">    
+    <link href='{% static "styles/blog_details_new.css" %}' rel="stylesheet">    
+{% endblock add_css_file %}
+{% block title %}Blog{% endblock title %}
+
+{% block content %}
+    <div id = "problem-page-container">
+        <div id = "sub-container">
+            <div id = "left-side" class = "problem-details-left-side">
+                <div class = "sub-section-title">
+                    {{blog.title}}
+                </div>
+                <div id = "sub-title">
+                    By&nbsp;<span style = "color: var(--color-a); font-size:1.2rem;">{{blog.author}}</span>,&nbsp;{{blog.added_date}}
+                </div>
+
+                <div id = "blog-content">
+                    {{blog.content}}
+                </div>
+
+                <div id = "blog-footer">
+                    <div id = "blog-vote">
+                        <a href="{% url 'blog_likes' blog.id %}">
+                            <img class = "icons vote-icon" src="{% static 'icons/upvote.svg' %}" alt="upvote">
+                        </a>
+                        <div id = "vote-count">{{count}}</div>
+                        <a href="{% url 'blog_dislikes' blog.id %}">
+                            <img class = "icons vote-icon" src="{% static 'icons/downvote.svg' %}" alt="upvote">
+                        </a>
+                    </div>
+                    <div id = "blog-details">
+                        <img class = "icons user-icon" src="{% static 'icons/user.svg' %}" alt="user">
+                        <div>{{blog.author}}</div>
+                        <div>{{time}}</div>
+                    </div>
+                </div>
+
+                <div id = "comment-div">
+                    <div id = "comment-title">
+                        <div>
+                            Comments&nbsp;({{comments_count}})
+                        </div>
+                        <div id = "add-comment">
+                            <span id = "reply_-1" class = "reply-comment-span">Add Comment</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <form method = "post" action = "{% url 'add_comment' blog.id %}">
+                                <div class = "reply-editor" id = "div_-1">
+                                    {% csrf_token %}
+                                    <textarea name = "text" id = "text_-1" rows="8" cols=""></textarea>
+                                    <div class = "div-btn">
+                                        <div class = "cancle-class btn" id = "cancle_btn_-1">
+                                            Cancle
+                                        </div>
+                                        <button type = "submit" class = "reply-class btn" id = "reply_btn_-1">
+                                            Reply
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id = "comment-container">
+                        {% for item in hope %}
+                            <div class = "comment-div" id = "parent_div_{{item.comment.id}}">
+                                {% for margin in item.level %}
+                                <div class = "comment-level-margin">
+                                    
+                                </div>
+                                {% endfor %}
+                                <div class = "comment-profile">
+                                    <img class = "comment-pfp" src="{{item.comment.user.profile_image.url}}" alt="pfp">
+                                    <div>
+                                        {{item.comment.user}}
+                                    </div>
+                                </div>
+                                <div class = "comment-container">
+                                    <div class = "comment-content-div">
+                                        <div class = "comment-content">
+                                            {{item.comment.text}}
+                                        </div>
+                                        <div class = "reply-comment">
+                                            <div class = "comment-time-div">
+                                                {{item.time}}
+                                            </div>
+                                            <div>
+                                                <span id = "reply_{{item.comment.id}}" class = "reply-comment-span">
+                                                    Reply
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <form method = "post" action = "{% url 'add_comment' blog.id item.comment.id %}">
+                                            <div class = "reply-editor" id = "div_{{item.comment.id}}">
+                                            {% csrf_token %}
+                                            <textarea name = "text" id = "text_{{item.comment.id}}" rows="8" cols=""></textarea>
+                                            <div class = "div-btn">
+                                                <div class = "cancle-class btn" id = "cancle_btn_{{item.comment.id}}">
+                                                    Cancle
+                                                </div>
+                                                <button type = "submit" class = "reply-class btn" id = "reply_btn_{{item.comment.id}}">
+                                                    Reply
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div id = "right-side">
+                <div class = "details-container">
+                    <div class = "details-title">
+                        Recent Blogs
+                    </div>
+                    <div>
+                        <table>
+                            <thead>
+                                <th>Author</th>
+                                <th>Title</th>
+                                <th>Time</th>
+                            </thead>
+                            <tbody>
+                                {% for blog in recent_blogs %}
+                                    <tr>
+                                        <td>{{blog.author}}</td>
+                                        <td><a href="{% url 'blog_details' blog.id %}">{{blog.title}}</a></td>
+                                        <td>{{blog.time}}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <form id="myForm">
+        {% csrf_token %}
+        <!-- Other form fields go here -->
+        <button type="button" id="submitBtn" style = "visibility:hidden">Submit</button>
+    </form>
+{% endblock content %}
+
+
+{% block add_js_file %}
+    <script src={% static 'scripts/blog_details_new.js' %}>
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        console.log("{{comment_id_focus}}")
+        let focus_div = document.getElementById("parent_div_" + "{{comment_id_focus}}")
+
+        focus_div.scrollIntoView({ behavior: "smooth" })
+
+    </script>
+
+    <script>
+        if("{{error}}"){
+            showToast("{{error}}" , "error")
+        }
+
+        if("{{info}}"){
+            showToast("{{info}}" , "info")
+        }
+    </script>
+
+{% endblock add_js_file %}

@@ -1,0 +1,145 @@
+#sub-title{
+
+}
+
+#blog-content{
+    border-left: 4px solid var(--color-a);
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 20px;
+}
+
+#blog-footer{
+    margin-top: 20px;
+    border: 2px solid var(--color-a);
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#blog-vote , #blog-details{
+    display: flex;
+    align-items: center;
+}
+
+.vote-icon{
+    position: relative;
+    top: -5px;
+}
+
+#vote-count{
+    margin: 0 5px;
+}
+
+.user-icon{
+    height: 15px;
+    width: auto;
+}
+
+#blog-details{
+    gap: 15px;
+}
+
+#comment-div{
+    margin-top: 20px;
+}
+#comment-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+#add-comment{
+    font-size: 1.2rem;
+}
+
+#comment-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comment-div{
+    display: flex;
+}
+
+.comment-level-margin{
+    width: 100px;
+}
+
+.comment-pfp{
+    height: 64px;
+    width: auto;
+}
+
+.comment-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment-container{
+    padding-right: 20px;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.comment-content-div{
+    border-left: 2px solid var(--color-a);
+    background-color: rgba(185, 49, 252 , 0.25);
+    padding: 10px;
+    display: flex;
+    padding-right: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+}
+.reply-comment{
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.comment-time-div{
+    align-self: flex-end;
+    font-size: 0.6rem;
+}
+
+.reply-comment-span{
+    text-decoration: underline;
+    cursor: pointer;
+    user-select: none;
+}
+
+.reply-editor{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+    display: none;
+}
+
+.reply-editor textarea{
+    width: 90%;
+}
+
+.div-btn div{
+    width: fit-content;
+}
+
+.div-btn{
+    display: flex;
+    gap: 10px;
+}
+
+#div_-1{
+    width: 100%;
+    margin-bottom: 20px;
+}

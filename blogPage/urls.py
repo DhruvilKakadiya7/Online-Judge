@@ -4,6 +4,7 @@ from .views import blog_page , blog_details , blog_likes , blog_dislikes, add_co
 urlpatterns = [
     path('' , blog_page , name = "blog_page"),
     path('<int:id>' , blog_details , name = "blog_details"),
+    path('<int:id>/<int:comment_id>' , blog_details , name = "blog_details"),
     # path('<uuid:id>/likes',blog_likes, name="blog_likes")
     path('blog/<int:id>/likes/', blog_likes, name='blog_likes'),
     path('blog/<int:id>/dislikes/', blog_dislikes, name='blog_dislikes'),
@@ -15,6 +16,7 @@ urlpatterns = [
     
     path('add_comment/<int:blog_id>/', add_comment, name='add_comment'),  # URL pattern for top-level comments
     path('add_comment/<int:blog_id>/<int:comment_id>/', add_comment, name='add_comment'),  # URL pattern for replies
+    path('add_comment_js/<int:blog_id>/<int:comment_id>/', add_comment, name='add_comment'),  # URL pattern for replies
 ]
 
 

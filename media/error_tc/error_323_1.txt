@@ -1,0 +1,243 @@
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:1:6: error: stray '#' in program
+ Case #1: 4
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:2:6: error: stray '#' in program
+ Case #2: 7
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:3:6: error: stray '#' in program
+ Case #3: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:4:6: error: stray '#' in program
+ Case #4: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:5:6: error: stray '#' in program
+ Case #5: 6
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:6:6: error: stray '#' in program
+ Case #6: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:7:6: error: stray '#' in program
+ Case #7: 1000000002
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:8:6: error: stray '#' in program
+ Case #8: 42
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:9:6: error: stray '#' in program
+ Case #9: 2
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:10:6: error: stray '#' in program
+ Case #10: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:11:6: error: stray '#' in program
+ Case #11: 2
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:12:6: error: stray '#' in program
+ Case #12: 1000000000
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:13:6: error: stray '#' in program
+ Case #13: 9
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:14:6: error: stray '#' in program
+ Case #14: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:15:6: error: stray '#' in program
+ Case #15: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:16:6: error: stray '#' in program
+ Case #16: 5
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:17:6: error: stray '#' in program
+ Case #17: 6
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:18:6: error: stray '#' in program
+ Case #18: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:19:6: error: stray '#' in program
+ Case #19: 2
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:20:6: error: stray '#' in program
+ Case #20: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:21:6: error: stray '#' in program
+ Case #21: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:22:6: error: stray '#' in program
+ Case #22: 3
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:23:6: error: stray '#' in program
+ Case #23: 2
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:24:6: error: stray '#' in program
+ Case #24: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:25:6: error: stray '#' in program
+ Case #25: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:26:6: error: stray '#' in program
+ Case #26: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:27:6: error: stray '#' in program
+ Case #27: 2
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:28:6: error: stray '#' in program
+ Case #28: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:29:6: error: stray '#' in program
+ Case #29: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:30:6: error: stray '#' in program
+ Case #30: 3
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:31:6: error: stray '#' in program
+ Case #31: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:32:6: error: stray '#' in program
+ Case #32: 3
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:33:6: error: stray '#' in program
+ Case #33: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:34:6: error: stray '#' in program
+ Case #34: 3
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:35:6: error: stray '#' in program
+ Case #35: 5
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:36:6: error: stray '#' in program
+ Case #36: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:37:6: error: stray '#' in program
+ Case #37: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:38:6: error: stray '#' in program
+ Case #38: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:39:6: error: stray '#' in program
+ Case #39: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:40:6: error: stray '#' in program
+ Case #40: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:41:6: error: stray '#' in program
+ Case #41: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:42:6: error: stray '#' in program
+ Case #42: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:43:6: error: stray '#' in program
+ Case #43: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:44:6: error: stray '#' in program
+ Case #44: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:45:6: error: stray '#' in program
+ Case #45: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:46:6: error: stray '#' in program
+ Case #46: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:47:6: error: stray '#' in program
+ Case #47: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:48:6: error: stray '#' in program
+ Case #48: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:49:6: error: stray '#' in program
+ Case #49: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:50:6: error: stray '#' in program
+ Case #50: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:51:6: error: stray '#' in program
+ Case #51: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:52:6: error: stray '#' in program
+ Case #52: 3
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:53:6: error: stray '#' in program
+ Case #53: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:54:6: error: stray '#' in program
+ Case #54: 30
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:55:6: error: stray '#' in program
+ Case #55: 7
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:56:6: error: stray '#' in program
+ Case #56: 129
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:57:6: error: stray '#' in program
+ Case #57: 38
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:58:6: error: stray '#' in program
+ Case #58: 46
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:59:6: error: stray '#' in program
+ Case #59: 235
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:60:6: error: stray '#' in program
+ Case #60: 76
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:61:6: error: stray '#' in program
+ Case #61: 198
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:62:6: error: stray '#' in program
+ Case #62: 367
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:63:6: error: stray '#' in program
+ Case #63: 40895814
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:64:6: error: stray '#' in program
+ Case #64: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:65:6: error: stray '#' in program
+ Case #65: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:66:6: error: stray '#' in program
+ Case #66: 11
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:67:6: error: stray '#' in program
+ Case #67: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:68:6: error: stray '#' in program
+ Case #68: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:69:6: error: stray '#' in program
+ Case #69: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:70:6: error: stray '#' in program
+ Case #70: 6
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:71:6: error: stray '#' in program
+ Case #71: 11
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:72:6: error: stray '#' in program
+ Case #72: 2
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:73:6: error: stray '#' in program
+ Case #73: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:74:6: error: stray '#' in program
+ Case #74: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:75:6: error: stray '#' in program
+ Case #75: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:76:6: error: stray '#' in program
+ Case #76: 1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:77:6: error: stray '#' in program
+ Case #77: -1
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:78:6: error: stray '#' in program
+ Case #78: 5
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:79:6: error: stray '#' in program
+ Case #79: 5
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:80:6: error: stray '#' in program
+ Case #80: 13
+      ^
+G:\SEM-7\ADF\FINAL PROJECT\HOPE 2.0\algobooth-adf\media\source_codes/output_GlaPFQl.cpp:1:1: error: 'Case' does not name a type
+ Case #1: 4
+ ^~~~

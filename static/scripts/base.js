@@ -69,3 +69,32 @@ function getUserID(id){
 if(getUserID){
     
 }
+
+// let drop = document.getElementById("profile-select").onchange = function(event){
+//     let value = event.target.value
+    
+//     if(value == "profile_page"){
+//         if(window.location.href.endsWith("profile_page/")){
+//             ;
+//         }
+//         else{
+//             console.log(window.location.href);
+//             window.location.href = "profile_page"
+//         }
+//     }
+//     else{
+//         window.location.href = "logout"
+//     }
+// }
+
+
+document.getElementById("drop-icon").onclick = function(){
+    let menu = document.getElementById("menu")
+    
+    if(menu.style.display != "flex"){
+        menu.style.display = "flex"
+    }
+    else{
+        menu.style.display = "none"
+    }
+}

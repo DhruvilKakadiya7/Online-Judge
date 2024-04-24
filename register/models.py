@@ -1,17 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
-# Create your models here.
-# class User(models.Model) :
-#     user_name = models.CharField(max_length = 50)
-#     first_name = models.CharField(max_length = 50)
-#     last_name = models.CharField(max_length = 50)
-#     email = models.EmailField()
-#     password = models.CharField(max_length = 50)
-    
-
-
-
 class CustomUser(AbstractUser):
     # Add custom fields here if needed
-    pass
+    country = models.CharField(max_length=100,blank=True, null=True)
+    university_name = models.CharField(max_length=100,blank=True, null=True)
+    profile_image = models.ImageField(upload_to='profile_image/', blank=True, null=True,default='profile_image/blank-profile-picture.png')

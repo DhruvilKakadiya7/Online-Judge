@@ -244,3 +244,10 @@ td:nth-child(2):hover{
 
 #submit-container{
 }
+
+#pdf-div{
+    text-align: center;
+    padding: 10px;
+    border: 2px solid var(--color-b);
+    border-radius: 5px;
+}
